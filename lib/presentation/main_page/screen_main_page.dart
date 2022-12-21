@@ -26,6 +26,7 @@ class ScreenMainPage extends StatelessWidget {
           builder: (context, index, child) {
             return _pages[index];
           },
-        ));
+        ),
+        bottomNavigationBar: const BottomNavigationWidget(),);
   }
 }
