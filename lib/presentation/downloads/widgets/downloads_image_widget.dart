@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class ImageDownload extends StatelessWidget {
-  const ImageDownload({
+class DownloadsImageWidget extends StatelessWidget {
+  const DownloadsImageWidget({
     Key? key,
     required this.imagelist,
     this.angle = 0,

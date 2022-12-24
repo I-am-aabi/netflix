@@ -1,34 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/presentation/downloads/widgets/download_movie_images.dart';
-import 'package:netflix/presentation/downloads/widgets/download_screen_lower_section.dart';
-import 'package:netflix/presentation/downloads/widgets/downloads_discription.dart';
-import 'package:netflix/presentation/downloads/widgets/smart_download.dart';
-import 'package:netflix/presentation/widgest/appbar_widget.dart';
 
-import '../../../core/colors/colors.dart';
+import 'package:netflix/presentation/downloads/widgets/section2.dart';
+import 'package:netflix/presentation/downloads/widgets/section3.dart';
+import 'package:netflix/presentation/downloads/widgets/smart_downloads.dart';
+import 'package:netflix/presentation/widgets/app_bar_widget.dart';
 
 class ScreenDownloads extends StatelessWidget {
-  const ScreenDownloads({super.key});
+  ScreenDownloads({super.key});
+  final _widgetList = [
+    const SmartDownloads(),
+    Section2(),
+    const Section3(),
+  ];
 
   @override
   Widget build(BuildContext context) {
-  
     return Scaffold(
-      backgroundColor: backgroundColor,
-      appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(50),
-          child: AppBarWidget(
-            title: 'Downloads',
-          )),
-      body: SafeArea(
-          child: ListView(
-        children: const [
-          SmartDownloads(),
-          DownloadDiscription(),
-          DownloadImages(),
-          DownloadButtons()
-        ],
-      )),
-    );
+        appBar: const PreferredSize(
+            preferredSize: Size.fromHeight(50),
+            child: SafeArea(
+                child: AppBarWidget(
+              title: "Downloads",
+            ))),
+        body: ListView.separated(
+          padding: EdgeInsets.all(10),
+          itemBuilder: (ctx, index) => _widgetList[index],
+          separatorBuilder: (ctx, index) => const SizedBox(
+            height: 25,
+          ),
+          itemCount: _widgetList.length,
+        ));
   }
 }

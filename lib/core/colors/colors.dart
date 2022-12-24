@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 const backgroundColor = Colors.black;
-const kwhite = Colors.white;
-const kBottonColorBlue = Colors.blue;
-const kBottonColorWhite = Colors.white;
-const kBlack = Colors.black;
+const kblackColor = Colors.black;
+const kwhitecolor = Colors.white;
+final buttonColor = Colors.blueAccent[700];
+const buttonColorWhite = Colors.white;
+const kGreyColor = Colors.grey;
