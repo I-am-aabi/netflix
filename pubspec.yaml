@@ -40,6 +40,9 @@ dependencies:
   freezed_annotation: ^2.2.0
   google_fonts: ^3.0.1
   injectable: ^2.1.0
+  intl: ^0.18.0
+  share_plus: ^6.3.0
+  video_player: ^2.4.10
 
 dev_dependencies:
   flutter_lints: ^2.0.0
